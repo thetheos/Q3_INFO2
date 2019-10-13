@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69a9ada6-a7d9-41a3-816b-78855cd6cefa" name="Default Changelist" comment="" />
+    <list default="true" id="69a9ada6-a7d9-41a3-816b-78855cd6cefa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MergeSort.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1RsEhwcMahgrfPweUMeEyiMSroh" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Q3.Math_Disc" />
   </component>
   <component name="RunDashboard">
@@ -24,7 +33,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MergeSort">
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MergeSort" />
+      <module name="LEPL1402_MergeSortImplementation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests.testComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LEPL1402_MergeSortImplementation" />
       <option name="PACKAGE_NAME" value="" />
@@ -37,6 +53,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSort" />
         <item itemvalue="JUnit.Tests.testComplete" />
       </list>
     </recent_temporary>
@@ -53,5 +70,27 @@
       <updated>1570447525352</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MergeSort.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
