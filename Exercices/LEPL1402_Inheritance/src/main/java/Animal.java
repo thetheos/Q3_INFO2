@@ -33,7 +33,7 @@ public class Animal {
          *       Example : "Cat is performing the following action: Sleep"
          *   Hint : Use the addStringToLogger method
          **/
-        addStringToLogger(this.name + " is performing the following action: " + action);
+        qa
     }
 
     public String getName() {
