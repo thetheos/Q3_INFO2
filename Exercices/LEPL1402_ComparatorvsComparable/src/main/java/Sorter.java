@@ -29,7 +29,24 @@ public class Sorter {
         Comparator<Plant> pltComp = new Comparator<Plant>() {
             @Override
             public int compare(Plant o1, Plant o2) {
-                return o1.compareTo(o2);
+                String s1 = o1.getName();
+                String s2 = o2.getName();
+                int comparison = 0;
+                int c1, c2;
+                for(int i = 0; i < s1.length() && i < s2.length(); i++) {
+                    c1 = (int) s1.charAt(i);   // See note 1
+                    c2 = (int) s2.charAt(i);   // See note 1
+                    comparison = c1 - c2;   // See note 2
+
+                    if(comparison != 0)     // See note 3
+                        return comparison;
+                }
+                if(s1.length() > s2.length())    // See note 4
+                    return 1;
+                else if (s1.length() < s2.length())
+                    return -1;
+                else
+                    return 0;
             }
         };
         list.sort(pltComp);

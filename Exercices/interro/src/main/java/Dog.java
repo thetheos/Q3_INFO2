@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
-public class Dog {
+public class Dog extends Mammal{
+public String shout(){
+    return "Wouf";
+}
 }

@@ -9,6 +9,7 @@ public class BigDecimal {
         len--;
         boolean negexp = (c == '-');
         // optional sign
+        // S'il y a un signe, on le supprime. En deplacant l'offset et en diminuant la taille
         if (negexp || c == '+') {
             offset++;
             c = in[offset];
@@ -17,6 +18,7 @@ public class BigDecimal {
         if (len <= 0) // no exponent digits
             throw new NumberFormatException();
         // skip leading zeros in the exponent
+        // Character.digit(c, 10) convertis le caractère en digit base 10)
         while (len > 10 && (c=='0' || (Character.digit(c, 10) == 0))) {
             offset++;
             c = in[offset];
@@ -28,10 +30,10 @@ public class BigDecimal {
         for (;; len--) {
             int v;
             if (c >= '0' && c <= '9') {
-                v = c - '0';
+                v = c - '0'; // Cette ligne de sert pas à grand chose
             } else {
                 v = Character.digit(c, 10);
-                if (v < 0) // not a digit
+                if (v < 0) // not a digit Cas où ce n'est pas un digit
                     throw new NumberFormatException();
             }
             exp = exp * 10 + v;

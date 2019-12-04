@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
+abstract public class Mammal extends Animal {
 
-public class Mammal {
 }

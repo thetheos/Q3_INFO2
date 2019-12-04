@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Animal {
+abstract public class Animal {
+    abstract String shout();
 }

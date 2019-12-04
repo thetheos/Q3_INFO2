@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ab8892b-50b6-4b21-86d6-5a992cd3700f" name="Default Changelist" comment="" />
+    <list default="true" id="8ab8892b-50b6-4b21-86d6-5a992cd3700f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../BinarySearch/src/main/java/BigDecimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BinarySearch/src/main/java/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FrenchBouledogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Mammal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/interro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/src/main/java/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/src/main/java/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/src/main/java/FrenchBouledogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/src/main/java/Mammal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../interro/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/src/main/java/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/src/main/java/Sorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../LEPL1402_ComparatorvsComparable/target/classes/Sorter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1RU1Ca9ZWNzEefPgpDsYjG3Jq3T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LEPL1402_StringUtils" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LEPL1402_MidTermQuiz" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -24,7 +57,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="LEPL1402_ASCIIDecoder" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LEPL1402_ASCIIDecoder" />
       <option name="PACKAGE_NAME" value="" />
@@ -36,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.Tests" />
       </list>
     </recent_temporary>
@@ -52,6 +93,19 @@
       <updated>1569706733472</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
