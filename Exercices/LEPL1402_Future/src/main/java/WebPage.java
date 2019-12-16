@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class WebPage {
 
@@ -14,7 +11,9 @@ public class WebPage {
      * Bound executor to a fixed thread pool size
      */
     public WebPage(int threadNumber, HTML html){
-        //TODO
+        this.executor = Executors.newFixedThreadPool(threadNumber);
+        this.html = html;
+        loadPage();
     }
 
     /*
@@ -22,7 +21,8 @@ public class WebPage {
      * to be executed by thread pool
      */
     public Future<Image> loadImage(URL url){
-        //TODO
+        Future<Image> f = this.executor.submit(() -> downloadImageFromURL(url));
+        return f;
     }
 
     /*
@@ -36,7 +36,11 @@ public class WebPage {
      * Load all images of the page
      */
     public List<Future<Image>> loadImages(List<URL> urls){
-        //TODO
+        List<Future<Image>> loadedImages = new ArrayList<>();
+        for(URL url : urls){
+            loadedImages.add(loadImage(url));
+        }
+        return loadedImages;
     }
 
     /*
