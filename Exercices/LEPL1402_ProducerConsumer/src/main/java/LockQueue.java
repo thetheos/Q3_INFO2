@@ -25,11 +25,9 @@ public class LockQueue {
         try{
             while (this.empty())
                 notFull.await();
-            if(this.    tail == SIZE) tail = 0;
             count--;
-            int val = cells[tail++];
             notEmpty.signal();
-            return val;
+            return cells[++head%SIZE];
         } catch (InterruptedException e) {
             e.printStackTrace();
             return null;
@@ -44,9 +42,7 @@ public class LockQueue {
         try{
             while(this.full())
                 notEmpty.await();
-
-            if(this.head == SIZE) head = 0;
-            cells[head++] = i;
+            cells[++tail%SIZE] = i;
             count++;
             notFull.signal();
         } catch (InterruptedException e) {

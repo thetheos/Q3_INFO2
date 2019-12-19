@@ -17,37 +17,39 @@ public class MaxFinder {
      * Worker constructor takes only one parameter int r, which is his associated row number
      * A worker is responsible of the calculation of the sum of each 2D-Array with row == r + nThread * round; with round >= 0
      *
-     * Run should compute the sum of a 2D-array and store the result in sums[] then wait for the cyclic barrier to get the result
+     * Run should compute the sums of a 2D-array and store the result in sums[] then wait for the cyclic barrier to get the result
      * And restart computing nThreads further
      */
     class Worker implements Runnable {
-        private final int row;
+        private int row;
         private int sum = 0;
-
+        private int round = 0;
+        private int r;
         public Worker(int r){
-            this.row = r;
+            this.r = r;
         }
 
         @Override
         public void run() {
-
-            for(int[] elm : data[row]){
-                for(int i : elm){
-                    sum += i;
+            while(round*nThreads+r < length){
+                this.row = r + nThreads * round;
+                sum = 0;
+                for(int[] elm : data[row]){
+                    for(int i : elm){
+                        sum += i;
+                    }
+                }
+                sums[r] = sum;
+                round++;
+                try {
+                    barrier.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (BrokenBarrierException e) {
+                    e.printStackTrace();
                 }
             }
-            sums[row] = sum;
-
-            try {
-                barrier.await();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (BrokenBarrierException e) {
-                e.printStackTrace();
-            }
         }
-
-        //TODO by student
         
     }
 	
@@ -58,44 +60,31 @@ public class MaxFinder {
      *
      */
     private MaxFinder(int[][][] matrix, int nThreads) throws InterruptedException{
-        this.depth = matrix.length;
+        this.length = matrix.length;
         this.width = matrix[0].length;
-        this.length = matrix[0][0].length;
+        this.depth = matrix[0][0].length;
         this.nThreads = nThreads;
         this.data = matrix;
-        this.sums = new int[this.depth];
-
+        this.sums = new int[nThreads];
+        max = Integer.MIN_VALUE;
         barrier = new CyclicBarrier(nThreads, () -> {
-            max = sums[0];
             for(int i : sums){
-                if(i> max) max = i;
+                max =Math.max(max,i);
             }
         });
 
-        int count=0;
-        int maxDepth = this.depth;
-        while(maxDepth != 0) {
-
-
-
-            if(maxDepth - count<0) count = maxDepth;
-            else count = nThreads;
-            maxDepth -= count;
-            Thread[] threads = new Thread[count];
-            //List<Thread> threads = new ArrayList<Thread>(count);
-
-            for (int i = 0; i < count; i++) {
-                Thread thread = new Thread(new Worker(i));
-                threads[i] = thread;
-                thread.start();
-            }
-
-            // wait until done
-            for (Thread thread : threads){
-                thread.join();
-            }
-
+        Thread[] threads = new Thread[nThreads];
+        for(int i = 0; i<nThreads;i++){
+            threads[i] = new Thread(new Worker(i));
+            threads[i].start();
         }
+
+        // wait until done
+        for (Thread thread : threads){
+            thread.join();
+        }
+
+
     }
     /*
     * subSize is the length of the subarray
